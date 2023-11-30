@@ -1,0 +1,38 @@
+:root {
+  --color: 240, 240, 240;
+  --alpha: 0.8;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background-color: transparent;
+  border-color: theme("colors.foreground");
+  border-width: 2px;
+  border-style: dashed;
+  opacity: 1;
+  border-radius: 15px;
+  transition-duration: 100ms;
+  z-index: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.drag-handle {
+  padding: 4px;
+  color: theme("colors.primary");
+  border-radius: 100%;
+  cursor: grab;
+}
+.drag-handle:hover {
+  background: color-mix(in srgb, currentColor 20%, transparent);
+}
+.drag-handle:active {
+  scale: 0.9;
+  background: color-mix(in srgb, currentColor 20%, transparent);
+  cursor: grabbing;
+}
+.drag-handle::selection {
+  cursor: grabbing;
+}
